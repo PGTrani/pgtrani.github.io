@@ -1,3 +1,7 @@
 .DS_Store
 .idea/
 .playwright-mcp/
+# file di lavoro di impeccable: non vanno pubblicati su Pages
+.impeccable/review/
+.impeccable/surfaces/
+.impeccable/live/

@@ -7,49 +7,60 @@
   <meta name="description" content="Aggiungi al tuo telefono il calendario 2026/27 della Pastorale Giovanile di Trani">
   <meta property="og:title" content="📅 Calendario PG Trani 2026/27">
   <meta property="og:description" content="Aggiungi tutti gli incontri al calendario del tuo telefono con un tocco.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📅</text></svg>">
+  <meta name="theme-color" content="#1356b4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d3a7a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="../../assets/img/logo-pg-trani.png">
+  <link rel="apple-touch-icon" href="../../assets/img/logo-pg-trani.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700..800&amp;family=Figtree:wght@400..700&amp;display=swap">
   <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
-  <main>
-    <a class="back" href="../">‹ PG Trani</a>
-
-    <header>
-      <div class="emoji">📅</div>
+  <header class="sea">
+    <div class="sea-inner">
+      <a class="back" href="../"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#chevron-left"/></svg>PG Trani</a>
+      <img class="logo" src="../../assets/img/logo-pg-trani.png" alt="Pastorale Giovanile Trani-Barletta-Bisceglie · Giovani di Trani" width="104" height="104">
       <h1>Calendario 2026/27</h1>
       <p>Pastorale Giovanile di Trani</p>
-    </header>
-
-    <nav class="buttons">
-      <a class="btn" id="ios"
-         href="webcal://calendar.google.com/calendar/ical/tranipastoralegiovanile%40gmail.com/public/basic.ics">
-        <span class="icon">🍎</span>
-        <span class="label">Aggiungi su iPhone<small>Tocca "Iscriviti" (o "Trova"), poi "Aggiungi"</small></span>
-        <span class="arrow">›</span>
-      </a>
-      <a class="btn" id="android"
-         href="https://calendar.google.com/calendar/r?cid=tranipastoralegiovanile@gmail.com">
-        <span class="icon">🤖</span>
-        <span class="label">Aggiungi su Android<small>Si apre Google Calendar: tocca "Aggiungi"</small></span>
-        <span class="arrow">›</span>
-      </a>
-      <a class="btn"
-         href="https://calendar.google.com/calendar/embed?src=tranipastoralegiovanile%40gmail.com&amp;ctz=Europe%2FRome">
-        <span class="icon">👀</span>
-        <span class="label">Vedi il calendario<small>Senza aggiungerlo</small></span>
-        <span class="arrow">›</span>
-      </a>
-    </nav>
-
-    <p class="note hidden" id="ios-google">
-      Usi l'app <strong>Google Calendar</strong> su iPhone? Usa il pulsante Android.
-    </p>
-
-    <div class="note">
-      🔄 Il calendario si <strong>aggiorna da solo</strong>: se cambia un incontro lo vedrai subito.<br>
-      🔔 Ricordati di <strong>attivare le notifiche</strong> per questo calendario.
     </div>
+    <svg class="waves" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path d="M0 28C180 12 540 44 720 28S1260 44 1440 28S1980 44 2160 28S2700 44 2880 28V80H0Z"/>
+      <path d="M0 46C180 32 540 60 720 46S1260 60 1440 46S1980 60 2160 46S2700 60 2880 46V80H0Z"/>
+      <path d="M0 62C180 52 540 72 720 62S1260 72 1440 62S1980 72 2160 62S2700 72 2880 62V80H0Z"/>
+    </svg>
+  </header>
+
+  <main>
+    <div class="actions">
+      <a class="action" id="ios" href="webcal://calendar.google.com/calendar/ical/tranipastoralegiovanile%40gmail.com/public/basic.ics">
+        <span class="tile"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#iphone"/></svg></span>
+        <span class="label">Aggiungi su iPhone<small>Tocca “Iscriviti” (o “Trova”), poi “Aggiungi”</small></span>
+        <svg class="i go" aria-hidden="true"><use href="../../assets/icons.svg#chevron-right"/></svg>
+      </a>
+      <a class="action" id="android" href="https://calendar.google.com/calendar/r?cid=tranipastoralegiovanile@gmail.com">
+        <span class="tile"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#android"/></svg></span>
+        <span class="label">Aggiungi su Android<small>Si apre Google Calendar: tocca “Aggiungi”</small></span>
+        <svg class="i go" aria-hidden="true"><use href="../../assets/icons.svg#chevron-right"/></svg>
+      </a>
+      <a class="action" href="https://calendar.google.com/calendar/embed?src=tranipastoralegiovanile%40gmail.com&amp;ctz=Europe%2FRome">
+        <span class="tile"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#eye"/></svg></span>
+        <span class="label">Vedi il calendario<small>Senza aggiungerlo</small></span>
+        <svg class="i go" aria-hidden="true"><use href="../../assets/icons.svg#chevron-right"/></svg>
+      </a>
+    </div>
+
+    <ul class="note hidden" id="ios-google">
+      <li><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#info"/></svg><p>Usi l’app <strong>Google Calendar</strong> su iPhone? Usa il pulsante Android.</p></li>
+    </ul>
+
+    <ul class="note">
+      <li><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#refresh"/></svg><p>Il calendario si <strong>aggiorna da solo</strong>: se cambia un incontro lo vedrai subito.</p></li>
+      <li><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#bell"/></svg><p>Ricordati di <strong>attivare le notifiche</strong> per questo calendario.</p></li>
+    </ul>
   </main>
+
+  <footer>Pastorale Giovanile · Arcidiocesi di Trani-Barletta-Bisceglie</footer>
 
   <script>
     // Evidenzia il pulsante del sistema operativo in uso e lo mette per primo

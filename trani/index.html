@@ -5,40 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PG Trani</title>
   <meta name="description" content="Pastorale Giovanile di Trani">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✝️</text></svg>">
+  <meta name="theme-color" content="#1356b4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d3a7a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="../assets/img/logo-pg-trani.png">
+  <link rel="apple-touch-icon" href="../assets/img/logo-pg-trani.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700..800&amp;family=Figtree:wght@400..700&amp;display=swap">
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-  <main>
-    <a class="back" href="../">‹ Tutte le città</a>
-
-    <header>
-      <img class="logo" src="../assets/img/logo-pg-trani.png" alt="Pastorale Giovanile Trani-Barletta-Bisceglie · Giovani di Trani">
+  <header class="sea">
+    <div class="sea-inner">
+      <a class="back" href="../"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#chevron-left"/></svg>Tutte le città</a>
+      <img class="logo" src="../assets/img/logo-pg-trani.png" alt="Pastorale Giovanile Trani-Barletta-Bisceglie · Giovani di Trani" width="104" height="104">
       <h1>PG Trani</h1>
       <p>Pastorale Giovanile di Trani</p>
-    </header>
+    </div>
+    <svg class="waves" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path d="M0 28C180 12 540 44 720 28S1260 44 1440 28S1980 44 2160 28S2700 44 2880 28V80H0Z"/>
+      <path d="M0 46C180 32 540 60 720 46S1260 60 1440 46S1980 60 2160 46S2700 60 2880 46V80H0Z"/>
+      <path d="M0 62C180 52 540 72 720 62S1260 72 1440 62S1980 72 2160 62S2700 72 2880 62V80H0Z"/>
+    </svg>
+  </header>
 
-    <nav class="buttons">
-      <a class="btn primary" href="calendario/">
-        <span class="icon">📅</span>
+  <main>
+    <div class="actions">
+      <a class="action primary" href="calendario/">
+        <span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#calendar-plus"/></svg></span>
         <span class="label">Calendario 2026/27<small>Aggiungilo al tuo telefono</small></span>
-        <span class="arrow">›</span>
+        <svg class="i go" aria-hidden="true"><use href="../assets/icons.svg#chevron-right"/></svg>
       </a>
-    </nav>
+    </div>
 
-    <h2 class="section-title">2025/26</h2>
-    <nav class="buttons">
-      <a class="btn" href="festaoratori2026/">
-        <span class="icon">🎪</span>
+    <h2 id="anno">2025/26</h2>
+    <nav class="list" aria-labelledby="anno">
+      <a class="row" href="festaoratori2026/">
+        <span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#sparkles"/></svg></span>
         <span class="label">Festa degli Oratori<small>3 luglio 2026 · Villa Comunale</small></span>
-        <span class="arrow">›</span>
+        <svg class="i go" aria-hidden="true"><use href="../assets/icons.svg#chevron-right"/></svg>
       </a>
-      <a class="btn" href="notteprimaesami/">
-        <span class="icon">🕯️</span>
+      <a class="row" href="notteprimaesami/">
+        <span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#flame"/></svg></span>
         <span class="label">Notte prima degli esami<small>Preghiera con i maturandi · 17 giugno 2026</small></span>
-        <span class="arrow">›</span>
+        <svg class="i go" aria-hidden="true"><use href="../assets/icons.svg#chevron-right"/></svg>
       </a>
     </nav>
   </main>
+
+  <footer>Pastorale Giovanile · Arcidiocesi di Trani-Barletta-Bisceglie</footer>
 </body>
 </html>

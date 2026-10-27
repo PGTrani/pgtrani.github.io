@@ -5,30 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PG Diocesi</title>
   <meta name="description" content="Eventi della Pastorale Giovanile dell'Arcidiocesi di Trani-Barletta-Bisceglie">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✝️</text></svg>">
+  <meta name="theme-color" content="#1356b4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d3a7a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="../assets/img/logo-pg-diocesi.png">
+  <link rel="apple-touch-icon" href="../assets/img/logo-pg-diocesi.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700..800&amp;family=Figtree:wght@400..700&amp;display=swap">
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-  <main>
-    <a class="back" href="../">‹ Pastorale Giovanile</a>
-
-    <header>
-      <div class="logos">
-        <img class="logo round" src="../assets/img/logo-pg-diocesi.png" alt="Pastorale Giovanile Arcidiocesi Trani-Barletta-Bisceglie">
-        <img class="logo tile" src="../assets/img/logo-diocesi.png" alt="Arcidiocesi Trani-Barletta-Bisceglie">
-      </div>
+  <header class="sea">
+    <div class="sea-inner">
+      <a class="back" href="../"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#chevron-left"/></svg>Pastorale Giovanile</a>
+      <div class="logos"><img class="logo" src="../assets/img/logo-pg-diocesi.png" alt="Pastorale Giovanile Arcidiocesi Trani-Barletta-Bisceglie" width="104" height="104"><img class="logo tile" src="../assets/img/logo-diocesi.png" alt="Arcidiocesi Trani-Barletta-Bisceglie" width="104" height="104"></div>
       <h1>Diocesi</h1>
       <p>Arcidiocesi di Trani-Barletta-Bisceglie</p>
-    </header>
+    </div>
+    <svg class="waves" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path d="M0 28C180 12 540 44 720 28S1260 44 1440 28S1980 44 2160 28S2700 44 2880 28V80H0Z"/>
+      <path d="M0 46C180 32 540 60 720 46S1260 60 1440 46S1980 60 2160 46S2700 60 2880 46V80H0Z"/>
+      <path d="M0 62C180 52 540 72 720 62S1260 72 1440 62S1980 72 2160 62S2700 72 2880 62V80H0Z"/>
+    </svg>
+  </header>
 
-    <h2 class="section-title">2025/26</h2>
-    <nav class="buttons">
-      <a class="btn" href="meeting2026/">
-        <span class="icon">🎒</span>
+  <main>
+    <h2 id="anno">2025/26</h2>
+    <nav class="list" aria-labelledby="anno">
+      <a class="row" href="meeting2026/">
+        <span class="tile"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#backpack"/></svg></span>
         <span class="label">XIX Meeting Giovanissimi<small>MeTeenGo · aprile 2026</small></span>
-        <span class="arrow">›</span>
+        <svg class="i go" aria-hidden="true"><use href="../assets/icons.svg#chevron-right"/></svg>
       </a>
     </nav>
   </main>
+
+  <footer>Pastorale Giovanile · Arcidiocesi di Trani-Barletta-Bisceglie</footer>
 </body>
 </html>

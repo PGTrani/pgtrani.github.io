@@ -1,0 +1,670 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-27T14:00:00+01:00",
+  "title": "Design System: Pastorale Giovanile · PG Trani",
+  "extensions": {
+    "colorMeta": {
+      "sea": {
+        "role": "primary",
+        "displayName": "Mare di Trani",
+        "canonical": "oklch(47.1% 0.163 258.6)",
+        "tonalRamp": [
+          "#000923",
+          "#012253",
+          "#043d8a",
+          "#1b5dbb",
+          "#3f80e2",
+          "#6da5fb",
+          "#aacbfd",
+          "#e5efff"
+        ],
+        "darkToken": "sea-dark"
+      },
+      "azure": {
+        "role": "primary",
+        "displayName": "Azzurro Azione",
+        "canonical": "oklch(55.8% 0.190 258.5)",
+        "tonalRamp": [
+          "#000923",
+          "#012253",
+          "#033d8a",
+          "#095bc5",
+          "#2f7ef1",
+          "#6da5fb",
+          "#aacbfd",
+          "#e5efff"
+        ],
+        "darkToken": "azure-dark"
+      },
+      "azure-strong": {
+        "role": "primary",
+        "displayName": "Azzurro Profondo",
+        "canonical": "oklch(49.0% 0.180 259.6)",
+        "tonalRamp": [
+          "#000924",
+          "#012156",
+          "#033c8e",
+          "#135ac5",
+          "#397eec",
+          "#6fa5fc",
+          "#abcbfd",
+          "#e6efff"
+        ],
+        "darkToken": "azure-strong-dark"
+      },
+      "wave-1": {
+        "role": "secondary",
+        "displayName": "Onda Larga",
+        "canonical": "oklch(62.0% 0.171 254.7)",
+        "tonalRamp": [
+          "#000b1f",
+          "#01244c",
+          "#04417f",
+          "#0b60b6",
+          "#2a82e6",
+          "#61a7ff",
+          "#a6ccfd",
+          "#e4f0fe"
+        ],
+        "darkToken": "wave-1-dark"
+      },
+      "wave-2": {
+        "role": "secondary",
+        "displayName": "Onda Chiara",
+        "canonical": "oklch(81.2% 0.100 247.0)",
+        "tonalRamp": [
+          "#000c1b",
+          "#002745",
+          "#004573",
+          "#2b6596",
+          "#4d87bb",
+          "#70abe0",
+          "#9ccffe",
+          "#e2f1ff"
+        ],
+        "darkToken": "wave-2-dark"
+      },
+      "on-sea": {
+        "role": "secondary",
+        "displayName": "Bianco sul Mare",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "on-sea-soft": {
+        "role": "secondary",
+        "displayName": "Spuma",
+        "canonical": "oklch(92.3% 0.038 251.9)",
+        "tonalRamp": [
+          "#010c1a",
+          "#172637",
+          "#334356",
+          "#526377",
+          "#728499",
+          "#94a7bd",
+          "#b8cbe2",
+          "#e3f0ff"
+        ],
+        "darkToken": "on-sea-soft-dark"
+      },
+      "red": {
+        "role": "tertiary",
+        "displayName": "Rosso delle Scritte",
+        "canonical": "oklch(52.2% 0.204 22.9)",
+        "tonalRamp": [
+          "#1e0002",
+          "#4c010a",
+          "#7f0417",
+          "#b60b26",
+          "#e33a44",
+          "#fc7573",
+          "#ffb2ae",
+          "#fee9e7"
+        ],
+        "darkToken": "red-dark"
+      },
+      "bg": {
+        "role": "neutral",
+        "displayName": "Fondo Freddo",
+        "canonical": "oklch(97.5% 0.008 253.9)",
+        "tonalRamp": [
+          "#090b0e",
+          "#222529",
+          "#3f4246",
+          "#5e6266",
+          "#7f8387",
+          "#a2a5aa",
+          "#c6c9ce",
+          "#ebeff4"
+        ],
+        "darkToken": "bg-dark"
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "Carta",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ],
+        "darkToken": "card-dark"
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Inchiostro Notte",
+        "canonical": "oklch(25.5% 0.062 255.5)",
+        "tonalRamp": [
+          "#000a20",
+          "#0e2542",
+          "#2b4363",
+          "#496384",
+          "#6a84a8",
+          "#8ba7cc",
+          "#afccf2",
+          "#e4f0ff"
+        ],
+        "darkToken": "text-dark"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Grigio Fondale",
+        "canonical": "oklch(47.9% 0.051 254.9)",
+        "tonalRamp": [
+          "#000b20",
+          "#13263d",
+          "#2f435d",
+          "#4e637e",
+          "#6e84a1",
+          "#90a7c5",
+          "#b3cbea",
+          "#e4f0ff"
+        ],
+        "darkToken": "muted-dark"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Filetto",
+        "canonical": "oklch(93.1% 0.016 253.9)",
+        "tonalRamp": [
+          "#070c12",
+          "#20262d",
+          "#3c434b",
+          "#5b626a",
+          "#7c838c",
+          "#9ea6af",
+          "#c2cad4",
+          "#e7eff9"
+        ],
+        "darkToken": "line-dark"
+      },
+      "tint": {
+        "role": "neutral",
+        "displayName": "Velo Azzurro",
+        "canonical": "oklch(95.1% 0.021 252.5)",
+        "tonalRamp": [
+          "#050c14",
+          "#1e262f",
+          "#3a434d",
+          "#59626d",
+          "#7a838f",
+          "#9ca6b2",
+          "#c0cad7",
+          "#e5f0fd"
+        ],
+        "darkToken": "tint-dark"
+      },
+      "sea-dark": {
+        "role": "primary",
+        "displayName": "Mare di Notte",
+        "lightToken": "sea",
+        "mode": "dark",
+        "canonical": "oklch(36.0% 0.119 258.5)",
+        "tonalRamp": [
+          "#000923",
+          "#012253",
+          "#133f80",
+          "#3460a4",
+          "#5483c9",
+          "#76a6ef",
+          "#aacbfd",
+          "#e5effe"
+        ]
+      },
+      "wave-1-dark": {
+        "role": "secondary",
+        "displayName": "Onda Larga (scuro)",
+        "lightToken": "wave-1",
+        "mode": "dark",
+        "canonical": "oklch(48.0% 0.150 257.2)",
+        "tonalRamp": [
+          "#000a21",
+          "#002352",
+          "#003e88",
+          "#1e5fb4",
+          "#4282da",
+          "#69a6fd",
+          "#a8ccfe",
+          "#e5efff"
+        ]
+      },
+      "wave-2-dark": {
+        "role": "secondary",
+        "displayName": "Onda Chiara (scuro)",
+        "lightToken": "wave-2",
+        "mode": "dark",
+        "canonical": "oklch(56.2% 0.157 256.1)",
+        "tonalRamp": [
+          "#000a21",
+          "#01234f",
+          "#024084",
+          "#125fb8",
+          "#3a82de",
+          "#67a7fc",
+          "#a7ccfe",
+          "#e4f0ff"
+        ]
+      },
+      "on-sea-soft-dark": {
+        "role": "secondary",
+        "displayName": "Spuma (scuro)",
+        "lightToken": "on-sea-soft",
+        "mode": "dark",
+        "canonical": "oklch(86.6% 0.056 251.8)",
+        "tonalRamp": [
+          "#000b1d",
+          "#0f263f",
+          "#2b445f",
+          "#4a6380",
+          "#6a85a3",
+          "#8ca8c7",
+          "#b0cced",
+          "#e3f0ff"
+        ]
+      },
+      "bg-dark": {
+        "role": "neutral",
+        "displayName": "Fondo Notte",
+        "lightToken": "bg",
+        "mode": "dark",
+        "canonical": "oklch(19.5% 0.046 255.7)",
+        "tonalRamp": [
+          "#010b1e",
+          "#15263b",
+          "#32435a",
+          "#50637b",
+          "#70849e",
+          "#92a7c2",
+          "#b6cbe7",
+          "#e4f0ff"
+        ]
+      },
+      "card-dark": {
+        "role": "neutral",
+        "displayName": "Carta Notte",
+        "lightToken": "card",
+        "mode": "dark",
+        "canonical": "oklch(25.6% 0.063 256.9)",
+        "tonalRamp": [
+          "#000a21",
+          "#0f2543",
+          "#2b4363",
+          "#4a6385",
+          "#6a84a8",
+          "#8ca7cd",
+          "#afcbf3",
+          "#e5f0ff"
+        ]
+      },
+      "text-dark": {
+        "role": "neutral",
+        "displayName": "Inchiostro Chiaro",
+        "lightToken": "text",
+        "mode": "dark",
+        "canonical": "oklch(95.8% 0.016 253.9)",
+        "tonalRamp": [
+          "#070c12",
+          "#20262d",
+          "#3c434b",
+          "#5b626a",
+          "#7c838c",
+          "#9ea6af",
+          "#c2cad4",
+          "#e7eff9"
+        ]
+      },
+      "muted-dark": {
+        "role": "neutral",
+        "displayName": "Grigio Fondale (scuro)",
+        "lightToken": "muted",
+        "mode": "dark",
+        "canonical": "oklch(76.0% 0.042 254.1)",
+        "tonalRamp": [
+          "#010b1c",
+          "#162639",
+          "#324358",
+          "#516379",
+          "#71849c",
+          "#93a7c0",
+          "#b7cbe5",
+          "#e4f0ff"
+        ]
+      },
+      "line-dark": {
+        "role": "neutral",
+        "displayName": "Filetto (scuro)",
+        "lightToken": "line",
+        "mode": "dark",
+        "canonical": "oklch(32.7% 0.070 256.4)",
+        "tonalRamp": [
+          "#000a20",
+          "#0b2546",
+          "#284367",
+          "#476389",
+          "#6784ac",
+          "#89a7d1",
+          "#acccf7",
+          "#e4f0ff"
+        ]
+      },
+      "azure-dark": {
+        "role": "primary",
+        "displayName": "Azzurro Azione (scuro)",
+        "lightToken": "azure",
+        "mode": "dark",
+        "canonical": "oklch(53.3% 0.183 260.1)",
+        "tonalRamp": [
+          "#000925",
+          "#002059",
+          "#053b8f",
+          "#1559c6",
+          "#3a7ded",
+          "#6fa5fd",
+          "#abcbfe",
+          "#e6efff"
+        ]
+      },
+      "azure-strong-dark": {
+        "role": "primary",
+        "displayName": "Azzurro Profondo (scuro)",
+        "lightToken": "azure-strong",
+        "mode": "dark",
+        "canonical": "oklch(57.9% 0.187 260.0)",
+        "tonalRamp": [
+          "#000825",
+          "#012057",
+          "#023b91",
+          "#1159c8",
+          "#387df0",
+          "#6ea4ff",
+          "#accbfd",
+          "#e6effe"
+        ]
+      },
+      "tint-dark": {
+        "role": "neutral",
+        "displayName": "Velo Azzurro (scuro)",
+        "lightToken": "tint",
+        "mode": "dark",
+        "canonical": "oklch(33.0% 0.087 256.7)",
+        "tonalRamp": [
+          "#000a21",
+          "#03244e",
+          "#21426f",
+          "#406292",
+          "#6084b6",
+          "#82a7db",
+          "#a9ccfc",
+          "#e5effe"
+        ]
+      },
+      "red-dark": {
+        "role": "tertiary",
+        "displayName": "Corallo delle Scritte",
+        "lightToken": "red",
+        "mode": "dark",
+        "canonical": "oklch(73.8% 0.162 14.5)",
+        "tonalRamp": [
+          "#1f0004",
+          "#4b0215",
+          "#7d0729",
+          "#a92a44",
+          "#d15063",
+          "#f97585",
+          "#fdb2b7",
+          "#ffe8e9"
+        ]
+      },
+      "tile-ink-dark": {
+        "role": "secondary",
+        "displayName": "Inchiostro Tessere (scuro)",
+        "lightToken": "wave-2",
+        "mode": "dark",
+        "canonical": "oklch(81.2% 0.100 247.0)",
+        "tonalRamp": [
+          "#000c1b",
+          "#002745",
+          "#004573",
+          "#2b6596",
+          "#4d87bb",
+          "#70abe0",
+          "#9ccffe",
+          "#e2f1ff"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Titolo bianco nella fascia di mare, uno per pagina."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Titoli di sezione in rosso sopra i gruppi di righe."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Etichette di righe e pulsanti toccabili (1.08rem nei pulsanti)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Testo corrente e note."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Sottoriga grigia sotto le etichette."
+      },
+      "badge": {
+        "displayName": "Badge",
+        "purpose": "Stato 'In arrivo' in pillola."
+      }
+    },
+    "shadows": [
+      {
+        "name": "ombra-carta",
+        "value": "0 1px 2px rgba(12, 35, 64, .06), 0 10px 28px -14px rgba(12, 35, 64, .22)",
+        "purpose": "Pulsanti e contenitori degli elenchi (tema chiaro)."
+      },
+      {
+        "name": "ombra-carta-dark",
+        "value": "0 1px 2px rgba(0, 0, 0, .3), 0 12px 30px -16px rgba(0, 0, 0, .7)",
+        "purpose": "Pulsanti e contenitori degli elenchi (tema scuro)."
+      },
+      {
+        "name": "ombra-disco",
+        "value": "0 6px 16px -6px rgba(0, 0, 0, .35)",
+        "purpose": "Disco del logo e tessera dello stemma sopra il mare."
+      }
+    ],
+    "motion": [
+      {
+        "name": "drift",
+        "value": "@keyframes drift { to { transform: translateX(-720px); } }",
+        "purpose": "Scorrimento delle onde del bordo della fascia: onda 1 21s linear infinite, onda 2 15s linear infinite reverse, onda 3 27s linear infinite. Fermo con prefers-reduced-motion."
+      },
+      {
+        "name": "press",
+        "value": "transform .12s ease; scale(.985)",
+        "purpose": "Feedback alla pressione dei pulsanti d'azione."
+      },
+      {
+        "name": "tint",
+        "value": "background-color .15s ease",
+        "purpose": "Velatura al passaggio su righe, pulsanti e link indietro."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "720px",
+        "purpose": "Fascia più alta (onde 88px, logo 120px); la colonna resta 520px."
+      }
+    ],
+    "focus": {
+      "value": "outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 6px",
+      "note": "Dentro gli elenchi offset -3px e raggio 16px; sul mare anello bianco."
+    },
+    "exceptions": [
+      {
+        "path": "trani/festaoratori2026/",
+        "note": "Grafica propria a tema Alice, generata da sorgenti: fuori dal sistema di proposito."
+      },
+      {
+        "path": "trani/notteprimaesami/",
+        "note": "Pagina di lettura con CSS inline che rispecchia palette e caratteri; non è un modello di componenti."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Fascia di mare",
+      "kind": "custom",
+      "refersTo": "sea-band",
+      "description": "Componente firma: apertura blu a tutta larghezza con link indietro, logo in disco bianco, titolo e bordo a tre onde in parallasse (ferme con riduci movimento).",
+      "html": "<header class=\"ds-sea\"><div class=\"ds-sea-inner\"><a class=\"ds-back\" href=\"#\"><svg class=\"ds-i\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m15 18-6-6 6-6\"/></svg>Tutte le città</a><span class=\"ds-logo\" aria-hidden=\"true\"></span><h1>PG Trani</h1><p>Pastorale Giovanile di Trani</p></div><svg class=\"ds-waves\" viewBox=\"0 0 1440 80\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path d=\"M0 28C180 12 540 44 720 28S1260 44 1440 28S1980 44 2160 28S2700 44 2880 28V80H0Z\"/><path d=\"M0 46C180 32 540 60 720 46S1260 60 1440 46S1980 60 2160 46S2700 60 2880 46V80H0Z\"/><path d=\"M0 62C180 52 540 72 720 62S1260 72 1440 62S1980 72 2160 62S2700 72 2880 62V80H0Z\"/></svg></header>",
+      "css": ":host{--sea:#1356b4;--wave-1:#2f86ea;--wave-2:#8cc8ff;--on-sea:#fff;--on-sea-soft:#d4e8ff;--bg:#f3f7fc;--card:#fff;--text:#0c2340;--muted:#4a5f7a;--line:#e1e9f3;--azure:#1d6ee0;--azure-strong:#1259c4;--tint:#e5f0fd;--red:#c4102b;--tile-ink:var(--azure);--shadow:0 1px 2px rgba(12,35,64,.06),0 10px 28px -14px rgba(12,35,64,.22);}.ds-i{width:22px;height:22px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.ds-go{width:20px;height:20px;color:var(--muted)}.ds-sea{position:relative;background:var(--sea);color:var(--on-sea);text-align:center;padding:16px 16px 76px;overflow:hidden;font-family:Figtree,system-ui,sans-serif}.ds-sea-inner{position:relative;z-index:1;max-width:520px;margin:0 auto}.ds-back{display:flex;align-items:center;gap:2px;width:max-content;margin:0 0 12px -6px;padding:8px 12px 8px 4px;border-radius:999px;color:var(--on-sea-soft);font-weight:600;font-size:.95rem;text-decoration:none;transition:background-color .15s ease,color .15s ease}.ds-back .ds-i{width:20px;height:20px}.ds-back:hover{background:rgba(255,255,255,.12);color:var(--on-sea)}.ds-back:focus-visible{outline:3px solid var(--on-sea);outline-offset:3px}.ds-logo{display:block;width:104px;height:104px;margin:0 auto;background:#fff;border-radius:50%;box-shadow:0 6px 16px -6px rgba(0,0,0,.35)}.ds-sea h1{margin:16px 0 4px;font-family:'Bricolage Grotesque',Figtree,system-ui,sans-serif;font-size:clamp(1.9rem,7vw,2.4rem);font-weight:800;line-height:1.08;letter-spacing:-.025em}.ds-sea p{margin:0;color:var(--on-sea-soft);font-weight:500}.ds-waves{position:absolute;left:0;bottom:-1px;width:100%;height:64px;display:block}.ds-waves path:nth-child(1){fill:var(--wave-1);animation:ds-drift 21s linear infinite}.ds-waves path:nth-child(2){fill:var(--wave-2);animation:ds-drift 15s linear infinite reverse}.ds-waves path:nth-child(3){fill:var(--bg);animation:ds-drift 27s linear infinite}@keyframes ds-drift{to{transform:translateX(-720px)}}@media (prefers-reduced-motion:reduce){.ds-waves path{animation:none}}"
+    },
+    {
+      "name": "Azione principale",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Il primo elemento sotto le onde: pieno azzurro, alto 64px, una sola per schermata.",
+      "html": "<a class=\"ds-action ds-primary\" href=\"#\"><span class=\"ds-tile\"><svg class=\"ds-i\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8M16 2v4M8 2v4M3 10h18M19 16v6M16 19h6\"/></svg></span><span class=\"ds-label\">Calendario 2026/27<small>Aggiungilo al tuo telefono</small></span><svg class=\"ds-i ds-go\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m9 18 6-6-6-6\"/></svg></a>",
+      "css": ":host{--sea:#1356b4;--wave-1:#2f86ea;--wave-2:#8cc8ff;--on-sea:#fff;--on-sea-soft:#d4e8ff;--bg:#f3f7fc;--card:#fff;--text:#0c2340;--muted:#4a5f7a;--line:#e1e9f3;--azure:#1d6ee0;--azure-strong:#1259c4;--tint:#e5f0fd;--red:#c4102b;--tile-ink:var(--azure);--shadow:0 1px 2px rgba(12,35,64,.06),0 10px 28px -14px rgba(12,35,64,.22);}.ds-i{width:22px;height:22px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.ds-go{width:20px;height:20px;color:var(--muted)}.ds-tile{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--tint);color:var(--tile-ink);flex-shrink:0}.ds-label{flex:1;min-width:0}.ds-label small{display:block;margin-top:2px;font-weight:500;font-size:.9rem;color:var(--muted)}.ds-action{display:flex;align-items:center;gap:14px;min-height:64px;max-width:488px;padding:14px 16px;border-radius:16px;background:var(--card);color:var(--text);text-decoration:none;font-family:Figtree,system-ui,sans-serif;font-weight:650;font-size:1.08rem;line-height:1.3;box-shadow:var(--shadow);transition:transform .12s ease,background-color .15s ease}.ds-action:hover{background:color-mix(in srgb,var(--tint) 45%,var(--card))}.ds-action:active{transform:scale(.985)}.ds-action:focus-visible{outline:3px solid var(--azure);outline-offset:3px;border-radius:16px}.ds-primary{background:var(--azure);color:#fff}.ds-primary:hover{background:var(--azure-strong)}.ds-primary .ds-tile{background:rgba(255,255,255,.18);color:#fff}.ds-primary small,.ds-primary .ds-go{color:#fff}"
+    },
+    {
+      "name": "Azione secondaria",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Pulsante su carta per le azioni alternative (es. le altre piattaforme del calendario).",
+      "html": "<a class=\"ds-action \" href=\"#\"><span class=\"ds-tile\"><svg class=\"ds-i\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg></span><span class=\"ds-label\">Vedi il calendario<small>Senza aggiungerlo</small></span><svg class=\"ds-i ds-go\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m9 18 6-6-6-6\"/></svg></a>",
+      "css": ":host{--sea:#1356b4;--wave-1:#2f86ea;--wave-2:#8cc8ff;--on-sea:#fff;--on-sea-soft:#d4e8ff;--bg:#f3f7fc;--card:#fff;--text:#0c2340;--muted:#4a5f7a;--line:#e1e9f3;--azure:#1d6ee0;--azure-strong:#1259c4;--tint:#e5f0fd;--red:#c4102b;--tile-ink:var(--azure);--shadow:0 1px 2px rgba(12,35,64,.06),0 10px 28px -14px rgba(12,35,64,.22);}.ds-i{width:22px;height:22px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.ds-go{width:20px;height:20px;color:var(--muted)}.ds-tile{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--tint);color:var(--tile-ink);flex-shrink:0}.ds-label{flex:1;min-width:0}.ds-label small{display:block;margin-top:2px;font-weight:500;font-size:.9rem;color:var(--muted)}.ds-action{display:flex;align-items:center;gap:14px;min-height:64px;max-width:488px;padding:14px 16px;border-radius:16px;background:var(--card);color:var(--text);text-decoration:none;font-family:Figtree,system-ui,sans-serif;font-weight:650;font-size:1.08rem;line-height:1.3;box-shadow:var(--shadow);transition:transform .12s ease,background-color .15s ease}.ds-action:hover{background:color-mix(in srgb,var(--tint) 45%,var(--card))}.ds-action:active{transform:scale(.985)}.ds-action:focus-visible{outline:3px solid var(--azure);outline-offset:3px;border-radius:16px}"
+    },
+    {
+      "name": "Elenco raggruppato",
+      "kind": "card",
+      "refersTo": "list-group",
+      "description": "Un solo contenitore per gruppo di link, righe da 64px divise da filetti che partono dopo la tessera; riga 'in arrivo' con badge.",
+      "html": "<h2 class=\"ds-h2\">Seguici</h2><nav class=\"ds-list\"><a class=\"ds-row\" href=\"#\"><span class=\"ds-tile\"><svg class=\"ds-i\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg></span><span class=\"ds-label\">Trani<small>Calendario ed eventi</small></span><svg class=\"ds-i ds-go\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m9 18 6-6-6-6\"/></svg></a><a class=\"ds-row\" href=\"#\"><span class=\"ds-tile\"><svg class=\"ds-i\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\"/><circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M17.5 6.5h.01\"/></svg></span><span class=\"ds-label\">Instagram<small>@pg_trani</small></span><svg class=\"ds-i ds-go\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 7h10v10M7 17 17 7\"/></svg></a><div class=\"ds-row ds-soon\"><span class=\"ds-tile\"><svg class=\"ds-i\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg></span><span class=\"ds-label\">Barletta</span><span class=\"ds-badge\">In arrivo</span></div></nav>",
+      "css": ":host{--sea:#1356b4;--wave-1:#2f86ea;--wave-2:#8cc8ff;--on-sea:#fff;--on-sea-soft:#d4e8ff;--bg:#f3f7fc;--card:#fff;--text:#0c2340;--muted:#4a5f7a;--line:#e1e9f3;--azure:#1d6ee0;--azure-strong:#1259c4;--tint:#e5f0fd;--red:#c4102b;--tile-ink:var(--azure);--shadow:0 1px 2px rgba(12,35,64,.06),0 10px 28px -14px rgba(12,35,64,.22);}.ds-i{width:22px;height:22px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.ds-go{width:20px;height:20px;color:var(--muted)}.ds-tile{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--tint);color:var(--tile-ink);flex-shrink:0}.ds-label{flex:1;min-width:0}.ds-label small{display:block;margin-top:2px;font-weight:500;font-size:.9rem;color:var(--muted)}.ds-h2{margin:0 4px 10px;font-family:'Bricolage Grotesque',Figtree,system-ui,sans-serif;font-size:1.3rem;font-weight:800;letter-spacing:-.02em;color:var(--red)}.ds-list{display:flex;flex-direction:column;max-width:488px;background:var(--card);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;font-family:Figtree,system-ui,sans-serif}.ds-row{position:relative;display:flex;align-items:center;gap:14px;min-height:64px;padding:12px 16px;color:var(--text);text-decoration:none;font-weight:650;font-size:1.0625rem;line-height:1.3;transition:background-color .15s ease}.ds-row+.ds-row::before{content:'';position:absolute;top:0;left:70px;right:0;border-top:1px solid var(--line)}.ds-row:hover{background:color-mix(in srgb,var(--tint) 45%,transparent)}.ds-row:active{background:var(--tint)}.ds-row:focus-visible{outline:3px solid var(--azure);outline-offset:-3px;border-radius:16px}.ds-soon{color:var(--muted)}.ds-soon:hover,.ds-soon:active{background:none}.ds-soon .ds-tile{background:transparent;color:var(--muted);box-shadow:inset 0 0 0 1.5px var(--line)}.ds-badge{padding:3px 10px;border-radius:999px;background:var(--bg);color:var(--muted);font-size:.78rem;font-weight:600;white-space:nowrap}"
+    },
+    {
+      "name": "Tessera icona",
+      "kind": "custom",
+      "refersTo": "icon-tile",
+      "description": "Quadrato 40px con icona a tratto 2px su Velo Azzurro; mai emoji.",
+      "html": "<span class=\"ds-tile\"><svg class=\"ds-i\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8M16 2v4M8 2v4M3 10h18M19 16v6M16 19h6\"/></svg></span>",
+      "css": ":host{--sea:#1356b4;--wave-1:#2f86ea;--wave-2:#8cc8ff;--on-sea:#fff;--on-sea-soft:#d4e8ff;--bg:#f3f7fc;--card:#fff;--text:#0c2340;--muted:#4a5f7a;--line:#e1e9f3;--azure:#1d6ee0;--azure-strong:#1259c4;--tint:#e5f0fd;--red:#c4102b;--tile-ink:var(--azure);--shadow:0 1px 2px rgba(12,35,64,.06),0 10px 28px -14px rgba(12,35,64,.22);}.ds-i{width:22px;height:22px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.ds-go{width:20px;height:20px;color:var(--muted)}.ds-tile{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--tint);color:var(--tile-ink);flex-shrink:0}"
+    },
+    {
+      "name": "Badge",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Pillola di stato, oggi solo 'In arrivo' sulle città non attive.",
+      "html": "<span class=\"ds-badge\">In arrivo</span>",
+      "css": ":host{--sea:#1356b4;--wave-1:#2f86ea;--wave-2:#8cc8ff;--on-sea:#fff;--on-sea-soft:#d4e8ff;--bg:#f3f7fc;--card:#fff;--text:#0c2340;--muted:#4a5f7a;--line:#e1e9f3;--azure:#1d6ee0;--azure-strong:#1259c4;--tint:#e5f0fd;--red:#c4102b;--tile-ink:var(--azure);--shadow:0 1px 2px rgba(12,35,64,.06),0 10px 28px -14px rgba(12,35,64,.22);}.ds-badge{display:inline-block;padding:3px 10px;border-radius:999px;background:var(--bg);color:var(--muted);font-family:Figtree,system-ui,sans-serif;font-size:.78rem;font-weight:600;white-space:nowrap}"
+    },
+    {
+      "name": "Nota informativa",
+      "kind": "card",
+      "refersTo": "note",
+      "description": "Blocco Velo Azzurro con voci a icona per istruzioni brevi sotto le azioni.",
+      "html": "<ul class=\"ds-note\"><li><svg class=\"ds-i\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8M21 3v5h-5\"/></svg><p>Il calendario si <strong>aggiorna da solo</strong>: se cambia un incontro lo vedrai subito.</p></li><li><svg class=\"ds-i\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M10.268 21a2 2 0 0 0 3.464 0M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326\"/></svg><p>Ricordati di <strong>attivare le notifiche</strong> per questo calendario.</p></li></ul>",
+      "css": ":host{--sea:#1356b4;--wave-1:#2f86ea;--wave-2:#8cc8ff;--on-sea:#fff;--on-sea-soft:#d4e8ff;--bg:#f3f7fc;--card:#fff;--text:#0c2340;--muted:#4a5f7a;--line:#e1e9f3;--azure:#1d6ee0;--azure-strong:#1259c4;--tint:#e5f0fd;--red:#c4102b;--tile-ink:var(--azure);--shadow:0 1px 2px rgba(12,35,64,.06),0 10px 28px -14px rgba(12,35,64,.22);}.ds-i{width:22px;height:22px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.ds-go{width:20px;height:20px;color:var(--muted)}.ds-note{max-width:488px;margin:0;padding:4px 16px;list-style:none;border-radius:16px;background:var(--tint);color:var(--text);font-family:Figtree,system-ui,sans-serif;font-size:.97rem;line-height:1.5}.ds-note li{display:flex;gap:12px;align-items:flex-start;padding:10px 0}.ds-note li+li{border-top:1px solid color-mix(in srgb,var(--azure) 15%,transparent)}.ds-note .ds-i{width:20px;height:20px;margin-top:2px;color:var(--tile-ink)}.ds-note p{margin:0}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Il mare sotto la croce",
+    "overview": "Il sistema nasce dai loghi ufficiali della Pastorale Giovanile: il blu del mare di Trani e delle onde sotto la croce, il rosso delle scritte. Ogni pagina si apre su una fascia di mare a tutta larghezza con il logo in un disco bianco, il titolo e un sottotitolo; il bordo inferiore della fascia sono tre onde sovrapposte che scorrono lente in parallasse e chiudono sul colore del fondo. Sotto le onde il mare finisce e comincia un fondo bianco freddo dove c'è solo ciò che si tocca: l'azione principale per prima, poi gruppi di righe titolati.\n\nLa densità è quella di un'app da telefono, non di un sito istituzionale: una colonna sola di 520px al massimo, aree di tocco alte 64px, contenitori morbidi con un'ombra leggera, icone disegnate a tratto dentro tessere azzurre. Il tono è giovane ma non infantile: il carattere display è un grotesk deciso a peso 800, il testo è un sans caldo e leggibile. Niente aria formale \"da chiesa\", niente decorazioni: l'unico gesto espressivo è il mare.\n\nIl sistema rifiuta in modo esplicito il default del sito precedente: fondo crema, accenti terracotta ed emoji usate come icone. Le uniche immagini sono i loghi ufficiali; non esistono foto degli eventi e non se ne inventano.\n\nEccezioni sancite: la pagina della Festa degli Oratori 2026 (`trani/festaoratori2026/`) mantiene di proposito la sua grafica a tema *Alice* ed è fuori da questo sistema. La pagina di preghiera \"Notte prima degli esami\" è una pagina di lettura con CSS proprio: eredita solo palette e caratteri, non la fascia di mare né i componenti, e non va presa come modello.",
+    "keyCharacteristics": [
+      "Fascia d'apertura blu pieno con logo in disco bianco e bordo a tre onde in parallasse.",
+      "Una colonna sola (max 520px), pensata per il telefono e per l'arrivo da link condiviso.",
+      "Azione principale piena azzurra, primo elemento sotto le onde.",
+      "Elenchi raggruppati in un unico contenitore con righe divise da filetti.",
+      "Icone a tratto 2px in tessere azzurre; mai emoji.",
+      "Tema scuro completo via `prefers-color-scheme`, movimento fermo con \"riduci movimento\"."
+    ],
+    "rules": [
+      {
+        "name": "The Sea Opens Rule",
+        "section": "colors",
+        "body": "Il blu pieno del mare sta solo nella fascia d'apertura. Il contenuto vive su fondo freddo e carta bianca; il blu torna sotto le onde soltanto come riempimento dell'azione principale e inchiostro delle icone."
+      },
+      {
+        "name": "The Red Is Ink Rule",
+        "section": "colors",
+        "body": "Il rosso è inchiostro per i titoli di sezione e nient'altro: mai pulsanti, fondi, bordi o icone rossi."
+      },
+      {
+        "name": "The Full Override Rule",
+        "section": "colors",
+        "body": "Ogni colore passa da un token e ogni token ha il suo valore scuro. In tema scuro si sostituiscono tutti i ruoli, comprese onde e ombra; non si aggiungono colori letterali fuori dai token."
+      },
+      {
+        "name": "The Two Voices Rule",
+        "section": "typography",
+        "body": "Bricolage Grotesque parla solo nei titoli (h1 sul mare, h2 di sezione). Tutto ciò che si tocca o si legge è Figtree."
+      },
+      {
+        "name": "The Tappable Weight Rule",
+        "section": "typography",
+        "body": "Le etichette toccabili sono a peso 650, sempre più pesanti delle sottorighe a 500: l'occhio trova il bersaglio prima della spiegazione."
+      },
+      {
+        "name": "The Soft Lift Rule",
+        "section": "elevation",
+        "body": "Una sola ombra per tutti i contenitori; nessun bordo attorno alle carte. I filetti esistono solo dentro un elenco, tra una riga e l'altra."
+      }
+    ],
+    "dos": [
+      "Do apri ogni pagina del sistema con la fascia di mare: logo in disco bianco, titolo Display, sottotitolo in Spuma e bordo a tre onde con l'ultima nel colore del fondo.",
+      "Do metti l'azione principale come primo elemento sotto le onde, piena Azzurro Azione, alta almeno 64px; al massimo una piena per schermata.",
+      "Do raggruppa i link correlati in un unico contenitore con righe divise da filetti che partono dopo la tessera (70px).",
+      "Do usa icone a tratto 2px dallo sprite condiviso, dentro tessere azzurre da 40px; chevron per le pagine interne, freccia in diagonale per i link esterni.",
+      "Do passa ogni colore da un token e dagli il valore scuro corrispondente.",
+      "Do ferma lo scorrimento delle onde con \"riduci movimento\"; nessun altro elemento si anima in modo continuo.",
+      "Do tieni la colonna a 520px anche su schermi larghi."
+    ],
+    "donts": [
+      "Don't usare emoji come icone.",
+      "Don't tornare al default del sito precedente: fondo crema, accenti terracotta, emoji.",
+      "Don't usare il rosso per pulsanti, fondi, bordi o icone: è solo per i titoli di sezione.",
+      "Don't spezzare un elenco in tante carte separate, né mettere bordi attorno alle carte.",
+      "Don't usare foto d'evento inventate o di repertorio: le uniche immagini sono i loghi ufficiali.",
+      "Don't applicare questo sistema alla Festa degli Oratori 2026, che ha una grafica propria, né prendere la pagina \"Notte prima degli esami\" come modello di componenti."
+    ]
+  }
+}
