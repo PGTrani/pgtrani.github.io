@@ -1,0 +1,104 @@
+:root {
+  --bg: #fdf8f1;
+  --card: #ffffff;
+  --text: #2a2320;
+  --muted: #6f6560;
+  --accent: #d9542b;
+  --accent-dark: #b4421f;
+  --border: #eadfd3;
+  --radius: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1816;
+    --card: #282220;
+    --text: #f3ebe4;
+    --muted: #b3a79f;
+    --accent: #f07a50;
+    --accent-dark: #ff9a75;
+    --border: #3a312d;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 40px 16px 32px;
+}
+
+header { text-align: center; margin-bottom: 32px; }
+header .emoji { font-size: 48px; line-height: 1; }
+h1 { font-size: 1.6rem; margin: 12px 0 4px; }
+header p { color: var(--muted); margin: 0; }
+
+.buttons { display: flex; flex-direction: column; gap: 12px; }
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: transform .1s ease, border-color .15s ease;
+}
+.btn:active { transform: scale(.98); }
+.btn:hover { border-color: var(--accent); }
+.btn .icon { font-size: 1.5rem; width: 1.8rem; text-align: center; }
+.btn .label { flex: 1; }
+.btn .label small { display: block; font-weight: 400; font-size: .85rem; color: var(--muted); }
+.btn .arrow { color: var(--muted); }
+
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.btn.primary .label small, .btn.primary .arrow { color: rgba(255, 255, 255, .85); }
+.btn.primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+
+.btn.disabled { opacity: .5; pointer-events: none; }
+
+.note {
+  margin-top: 24px;
+  padding: 14px 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: .95rem;
+  color: var(--muted);
+}
+.note strong { color: var(--text); }
+
+.back {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.hidden { display: none; }
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: .85rem;
+  color: var(--muted);
+}
