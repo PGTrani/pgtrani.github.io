@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#143029">
+<title>Festa degli Oratori · Alice nel Paese delle Meraviglie</title>
+<link rel="apple-touch-icon" href="__COVER__">
+<style>
+@font-face{
+  font-family:'Qwerty';
+  src:url(__FONT__) format('opentype');
+  font-display:swap;
+}
+:root{
+  --bg1:#1a4038; --bg2:#0d231f;
+  --cream:#f7eed4; --cream2:#fbf6e6;
+  --ink:#2c2620; --ink-soft:#5c5444;
+  --gold:#d9b44a; --gold-d:#b8902f;
+  --red:#b3263a; --red-d:#8a1b2c;
+  --purple:#6a4c93; --teal:#2f7d6e;
+  --shadow:0 10px 30px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent}
+html,body{margin:0; padding:0}
+body{
+  font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  color:var(--ink);
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(217,180,74,.22), transparent 60%),
+    linear-gradient(160deg,var(--bg1),var(--bg2));
+  background-attachment:fixed;
+  min-height:100vh;
+  line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+}
+/* floating suits backdrop */
+.suits{position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:0; opacity:.08}
+.suits span{position:absolute; color:#fff; font-size:42px; animation:float 14s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-26px) rotate(8deg)}}
+
+.app{position:relative; z-index:1; max-width:560px; margin:0 auto; padding:0 16px calc(40px + env(safe-area-inset-bottom))}
+
+/* ---------- TOP BAR ---------- */
+.topbar{
+  position:sticky; top:0; z-index:30;
+  display:flex; align-items:center; gap:10px;
+  padding:calc(10px + env(safe-area-inset-top)) 4px 10px;
+  margin:0 -16px 4px; padding-left:16px; padding-right:16px;
+  background:linear-gradient(180deg,rgba(13,35,31,.96),rgba(13,35,31,.78) 70%,transparent);
+  backdrop-filter:blur(6px);
+}
+.back{
+  appearance:none; border:none; cursor:pointer;
+  background:rgba(247,238,212,.14); color:var(--cream);
+  font:inherit; font-size:15px; padding:8px 14px; border-radius:999px;
+  display:none; align-items:center; gap:6px;
+}
+.back.show{display:inline-flex}
+.topbar h1{
+  font-family:'Qwerty',cursive; color:var(--cream);
+  font-size:22px; margin:0; font-weight:400; letter-spacing:.5px;
+  text-shadow:0 2px 0 rgba(0,0,0,.25); flex:1; line-height:1.1;
+}
+
+/* ---------- SCREENS ---------- */
+.screen{display:none; animation:fade .35s ease both}
+.screen.active{display:block}
+@keyframes fade{from{opacity:0; transform:translateY(8px)}to{opacity:1; transform:none}}
+
+/* ---------- HERO / HOME ---------- */
+.hero{text-align:center; padding:6px 0 4px}
+.hero .cover{
+  width:200px; max-width:62%; filter:drop-shadow(0 14px 22px rgba(0,0,0,.35));
+  animation:bob 5s ease-in-out infinite;
+}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-10px) rotate(2deg)}}
+.hero .kicker{
+  color:var(--gold); letter-spacing:3px; font-size:12px; text-transform:uppercase;
+  margin:6px 0 0; font-family:Georgia,serif;
+}
+.hero h2{
+  font-family:'Qwerty',cursive; color:var(--cream); font-weight:400;
+  font-size:34px; line-height:1; margin:6px 0 2px; text-shadow:0 3px 0 rgba(0,0,0,.25);
+}
+.hero .sub{color:#cfe6dd; font-size:15px; margin:0}
+.hero .when{
+  display:inline-block; margin-top:12px; color:var(--ink);
+  background:linear-gradient(180deg,var(--cream2),var(--cream));
+  border:2px solid var(--gold); border-radius:999px;
+  padding:7px 18px; font-size:14px; box-shadow:var(--shadow);
+}
+.section-title{
+  display:flex; align-items:center; gap:10px;
+  color:var(--cream); font-family:'Qwerty',cursive; font-weight:400;
+  font-size:22px; margin:26px 4px 12px;
+}
+.section-title::before,.section-title::after{content:""; flex:1; height:1px; background:linear-gradient(90deg,transparent,rgba(217,180,74,.5),transparent)}
+.section-title span{flex:0 0 auto}
+
+/* group grid */
+.grid{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.gcard{
+  position:relative; cursor:pointer; text-align:left;
+  display:flex; align-items:center; min-height:92px;
+  background:linear-gradient(180deg,var(--cream2),var(--cream));
+  border:none; border-radius:18px; padding:14px 32px 14px 22px;
+  box-shadow:var(--shadow); overflow:hidden; font:inherit; color:var(--ink);
+  transition:transform .12s ease;
+}
+.gcard:active{transform:scale(.97)}
+.gcard::before{content:""; position:absolute; left:0; top:0; bottom:0; width:7px; background:var(--c,var(--gold))}
+.gcard .gname{font-family:'Qwerty',cursive; font-size:26px; margin:0; line-height:1.08}
+.gcard .go{position:absolute; right:12px; top:50%; transform:translateY(-50%); color:var(--gold-d); font-size:22px}
+
+.bigbtns{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px}
+.bigbtn{
+  cursor:pointer; font:inherit; color:var(--cream);
+  border:2px solid rgba(247,238,212,.35); border-radius:18px;
+  background:rgba(247,238,212,.08); padding:18px 12px; text-align:center;
+  display:flex; flex-direction:column; align-items:center; gap:6px;
+}
+.bigbtn:active{transform:scale(.97)}
+.bigbtn .bi{font-size:30px}
+.bigbtn b{font-family:'Qwerty',cursive; font-weight:400; font-size:18px}
+.bigbtn small{color:#bcd6cd; font-size:12px}
+
+/* ---------- GROUP SCREEN ---------- */
+.ghead{
+  background:linear-gradient(180deg,var(--cream2),var(--cream));
+  border-radius:20px; padding:16px 18px; box-shadow:var(--shadow);
+  position:relative; overflow:hidden; margin-bottom:6px;
+}
+.ghead::before{content:""; position:absolute; left:0; top:0; bottom:0; width:8px; background:var(--c,var(--gold))}
+.ghead .ge{font-size:30px}
+.ghead h2{font-family:'Qwerty',cursive; font-weight:400; font-size:26px; margin:4px 0 2px; line-height:1.05}
+.ghead p{margin:0; color:var(--ink-soft); font-size:13.5px}
+.ghead .mapbtn{
+  margin-top:12px; display:inline-flex; align-items:center; gap:8px; cursor:pointer;
+  font:inherit; color:#fff; background:var(--teal); border:none;
+  border-radius:999px; padding:9px 16px; font-size:14px; box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+.ghead .mapbtn:active{transform:scale(.96)}
+
+.livebar{
+  display:none; align-items:center; gap:8px; margin:12px 2px 2px;
+  color:var(--cream); font-size:13px;
+}
+.livebar.show{display:flex}
+.livedot{width:9px; height:9px; border-radius:50%; background:#ff5a5a; box-shadow:0 0 0 0 rgba(255,90,90,.6); animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,90,90,.6)}70%{box-shadow:0 0 0 10px rgba(255,90,90,0)}100%{box-shadow:0 0 0 0 rgba(255,90,90,0)}}
+
+/* timeline */
+.timeline{margin-top:14px; position:relative}
+.stop{
+  display:grid; grid-template-columns:54px 1fr; gap:12px; align-items:stretch;
+  margin-bottom:12px; position:relative;
+}
+.stop .time{
+  display:flex; flex-direction:column; align-items:center; justify-content:flex-start; padding-top:8px;
+  color:var(--cream); position:relative;
+}
+.stop .time b{font-size:15px; font-variant-numeric:tabular-nums; font-family:Georgia,serif}
+.stop .time::after{ /* connector */
+  content:""; position:absolute; top:34px; bottom:-20px; width:2px;
+  background:repeating-linear-gradient(var(--gold) 0 6px, transparent 6px 12px);
+  opacity:.5;
+}
+.stop:last-child .time::after{display:none}
+.card{
+  background:linear-gradient(180deg,var(--cream2),var(--cream));
+  border-radius:16px; padding:10px 12px; box-shadow:var(--shadow);
+  display:flex; align-items:center; gap:12px; position:relative; overflow:hidden;
+  border:2px solid transparent;
+}
+.card::before{content:""; position:absolute; left:0; top:0; bottom:0; width:6px; background:var(--c,var(--gold))}
+.card img{width:58px; height:58px; object-fit:contain; flex:0 0 auto; filter:drop-shadow(0 3px 4px rgba(0,0,0,.2))}
+.card .info{flex:1; min-width:0}
+.card .badge{
+  display:inline-block; background:var(--c,var(--gold)); color:#fff;
+  font-size:11px; font-weight:bold; padding:1px 8px; border-radius:999px; margin-bottom:3px;
+  font-family:Georgia,serif; letter-spacing:.3px;
+}
+.card .pname{font-family:'Qwerty',cursive; font-size:19px; line-height:1; margin:1px 0}
+.card .game{font-size:13px; color:var(--ink-soft)}
+.card.merenda{background:linear-gradient(180deg,#fff5d6,#ffe9a8)}
+.card.merenda .game{color:#8a6a12; font-weight:600}
+.stop.now .card{border-color:#ff5a5a; box-shadow:0 0 0 3px rgba(255,90,90,.25),var(--shadow)}
+.stop.now .nowtag{
+  position:absolute; right:8px; top:8px; background:#ff5a5a; color:#fff;
+  font-size:10px; padding:2px 7px; border-radius:999px; font-family:Georgia,serif;
+}
+.skip{
+  text-align:center; color:#cfe6dd; font-size:12.5px; margin:4px 0 0; opacity:.8;
+}
+
+/* ---------- MAP SCREEN ---------- */
+.mapwrap{
+  position:relative; border-radius:18px; overflow:hidden;
+  box-shadow:var(--shadow); background:#cfe0e8; line-height:0;
+  border:3px solid var(--cream);
+}
+.mapwrap img{width:100%; display:block}
+.mapwrap svg.trail{position:absolute; inset:0; width:100%; height:100%; pointer-events:none}
+.pin{
+  position:absolute; transform:translate(-50%,-50%);
+  width:42px; height:42px; border-radius:50%; cursor:pointer;
+  border:3px solid var(--c,var(--gold)); background:rgba(255,255,255,.12);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.35);
+}
+.pin .ord{
+  position:absolute; top:-9px; right:-9px; min-width:20px; height:20px; padding:0 4px;
+  background:var(--c,var(--gold)); color:#fff; border-radius:999px;
+  font:bold 12px Georgia,serif; display:none; align-items:center; justify-content:center;
+  border:2px solid #fff;
+}
+.pin.in-path{background:var(--c); box-shadow:0 0 0 4px rgba(255,255,255,.45),0 4px 10px rgba(0,0,0,.4)}
+.pin.in-path .ord{display:flex}
+.pin.dim{opacity:.32}
+.pin .tea{font-size:18px}
+.startpin{
+  position:absolute; transform:translate(-50%,-50%); width:18px; height:18px;
+  border-radius:50%; background:var(--cream); border:3px solid var(--red);
+  box-shadow:0 0 0 4px rgba(255,255,255,.35);
+}
+.mapnote{color:#cfe6dd; font-size:12.5px; text-align:center; margin:10px 4px 0}
+
+.pathsel{
+  display:flex; align-items:center; gap:10px; margin:0 2px 12px;
+  background:rgba(247,238,212,.1); border:1px solid rgba(247,238,212,.22);
+  border-radius:14px; padding:10px 12px;
+}
+.pathsel label{color:var(--cream); font-size:13px; flex:0 0 auto}
+.pathsel select{
+  flex:1; font:inherit; font-size:14px; padding:8px 10px; border-radius:10px;
+  border:2px solid var(--gold); background:var(--cream); color:var(--ink);
+}
+
+/* ---------- POPUP / SHEET ---------- */
+.sheet-bg{
+  position:fixed; inset:0; z-index:50; background:rgba(8,18,16,.55);
+  display:none; align-items:flex-end; justify-content:center; padding:0;
+  backdrop-filter:blur(2px);
+}
+.sheet-bg.show{display:flex; animation:fade .2s ease}
+.sheet{
+  width:100%; max-width:560px; background:linear-gradient(180deg,var(--cream2),var(--cream));
+  border-radius:22px 22px 0 0; padding:10px 18px calc(26px + env(safe-area-inset-bottom));
+  box-shadow:0 -10px 40px rgba(0,0,0,.4); animation:slideup .28s cubic-bezier(.2,.9,.3,1) both;
+  border-top:4px solid var(--c,var(--gold));
+}
+@keyframes slideup{from{transform:translateY(100%)}to{transform:none}}
+.sheet .grab{width:44px; height:5px; border-radius:999px; background:rgba(0,0,0,.18); margin:0 auto 10px}
+.sheet .top{display:flex; gap:14px; align-items:center}
+.sheet img{width:96px; height:96px; object-fit:contain; filter:drop-shadow(0 4px 6px rgba(0,0,0,.2))}
+.sheet .badge{display:inline-block; background:var(--c,var(--gold)); color:#fff; font-size:12px; padding:2px 10px; border-radius:999px; font-family:Georgia,serif}
+.sheet h3{font-family:'Qwerty',cursive; font-weight:400; font-size:27px; margin:6px 0 2px; line-height:1}
+.sheet .g{font-size:15px; color:var(--ink); margin:0}
+.sheet .by{font-size:13px; color:var(--ink-soft); margin:8px 0 0}
+.sheet .by b{color:var(--ink)}
+.sheet.merenda{background:linear-gradient(180deg,#fff5d6,#ffe9a8)}
+
+/* info modal reuse */
+.sheet ul{margin:10px 0 0; padding-left:18px; font-size:14px}
+.sheet ul li{margin:5px 0}
+.sheet .closebtn{
+  margin-top:16px; width:100%; cursor:pointer; font:inherit; font-size:15px;
+  color:#fff; background:var(--teal); border:none; border-radius:12px; padding:12px;
+}
+/* ---------- INNI ---------- */
+.hymns{display:flex; flex-direction:column; gap:12px}
+.hymn{
+  display:flex; align-items:center; gap:14px;
+  background:linear-gradient(180deg,var(--cream2),var(--cream));
+  border-radius:18px; padding:14px 16px 14px 22px; box-shadow:var(--shadow);
+  position:relative; overflow:hidden;
+}
+.hymn::before{content:""; position:absolute; left:0; top:0; bottom:0; width:7px; background:var(--c,var(--gold))}
+.hplay{
+  flex:0 0 auto; width:52px; height:52px; border-radius:50%; border:none; cursor:pointer;
+  background:var(--c,var(--gold)); color:#fff; font-size:19px; padding:0;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 4px 10px rgba(0,0,0,.22); transition:transform .12s ease;
+}
+.hplay:active{transform:scale(.92)}
+.hbody{flex:1; min-width:0}
+.hymn .hname{font-family:'Qwerty',cursive; font-size:22px; line-height:1.05}
+.hymn .hsub{color:var(--ink-soft); font-size:12.5px; margin-top:1px}
+.hbar{margin-top:9px; height:7px; border-radius:99px; background:rgba(0,0,0,.12); overflow:hidden; cursor:pointer}
+.hfill{height:100%; width:0%; background:var(--c,var(--gold)); border-radius:99px}
+.htime{font-size:11.5px; color:var(--ink-soft); margin-top:4px; font-variant-numeric:tabular-nums}
+.herr{font-size:12px; color:var(--red); margin-top:4px; display:none}
+
+.footer{text-align:center; color:#9fc1b7; font-size:11.5px; margin-top:30px; opacity:.7}
+</style>
+</head>
+<body>
+<div class="suits" id="suits"></div>
+<div class="app">
+
+  <div class="topbar">
+    <button class="back" id="backBtn">‹ Indietro</button>
+    <h1 id="barTitle">Festa degli Oratori</h1>
+  </div>
+
+  <!-- HOME -->
+  <section class="screen active" id="home">
+    <div class="hero">
+      <img class="cover" src="__COVER__" alt="Alice">
+      <p class="kicker">Che Meraviglia!</p>
+      <h2>Festa degli Oratori</h2>
+      <p class="sub">Alice nel Paese delle Meraviglie</p>
+      <div class="when">📍 Villa Comunale di Trani · 🗓️ venerdì 3 luglio 2026</div>
+    </div>
+
+    <div class="section-title"><span>Scegli la tua parrocchia</span></div>
+    <div class="grid" id="groupGrid"></div>
+
+    <div class="bigbtns">
+      <button class="bigbtn" onclick="openMap(null)">
+        <span class="bi">🗺️</span><b>La Mappa</b><small>Tutti gli 8 stand</small>
+      </button>
+      <button class="bigbtn" onclick="openInfo()">
+        <span class="bi">🐇</span><b>Come funziona</b><small>Le regole del giro</small>
+      </button>
+    </div>
+
+    <div class="section-title"><span>🎵 Gli inni</span></div>
+    <div class="hymns" id="hymns"></div>
+
+    <p class="footer">Il giro stand: 17:30 – 18:40 · 7 turni da 10 minuti<br>Cambio a ogni fischio/campanella</p>
+  </section>
+
+  <!-- GROUP -->
+  <section class="screen" id="group"></section>
+
+  <!-- MAP -->
+  <section class="screen" id="map">
+    <div class="pathsel">
+      <label for="pathSel">Percorso di:</label>
+      <select id="pathSel" onchange="setPath(this.value)"></select>
+    </div>
+    <div class="mapwrap" id="mapwrap">
+      <img src="__MAP__" alt="Mappa Villa Comunale di Trani con gli stand">
+      <svg class="trail" id="trail" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+    </div>
+    <p class="mapnote">Tocca un numero per scoprire personaggio e gioco.<br>Scegli una parrocchia qui sopra per vedere il suo percorso disegnato.</p>
+  </section>
+
+</div>
+
+<!-- bottom sheet -->
+<div class="sheet-bg" id="sheetBg" onclick="if(event.target===this)closeSheet()">
+  <div class="sheet" id="sheet"></div>
+</div>
+
+<script>
+const IMG={
+  cover:"__COVER__", map:"__MAP__",
+  s1:"__S1__", s2:"__S2__", s3:"__S3__", s4:"__S4__", s5:"__S5__", s6:"__S6__", s6b:"__S6B__", s7:"__S7__", s8:"__S8__"
+};
+const STANDS={
+ 1:{nome:"Bianconiglio", gioco:"L'onda del Bianconiglio", gestore:"Spirito Santo", img:IMG.s1, x:49.4,y:27.8, c:"#3a7d44"},
+ 2:{nome:"Brucaliffo", gioco:"Il Bruco Brucaliffo", gestore:"Santa Chiara", img:IMG.s2, x:37.2,y:38.3, c:"#5a8f3a"},
+ 3:{nome:"Cappellaio Matto", gioco:"Merenda · tè freddo", gestore:"Pastorale Giovanile", img:IMG.s3, x:83.8,y:85.0, c:"#c98a2b", merenda:true},
+ 4:{nome:"Regina di Cuori", gioco:"Il Decreto dei Numeri", gestore:"San Magno", img:IMG.s4, x:27.8,y:16.7, c:"#a01e2e"},
+ 5:{nome:"Stregatto", gioco:"Di qua, di là, su, giù", gestore:"Angeli Custodi", img:IMG.s5, x:63.4,y:25.0, c:"#b14f8a"},
+ 6:{nome:"Dodo e Topo", gioco:"La Corsa del Dodo", gestore:"S. Francesco / S. Giuseppe", img:IMG.s6, img2:IMG.s6b, x:62.2,y:43.3, c:"#8a6d3b"},
+ 7:{nome:"Duchessa", gioco:"La Duchessa Casalinga", gestore:"Spirito Santo", img:IMG.s7, x:81.9,y:44.4, c:"#4a6fa5"},
+ 8:{nome:"Carte", gioco:"Trova il Tuo Seme", gestore:"Madonna di Fatima", img:IMG.s8, x:16.9,y:35.6, c:"#c0392b"}
+};
+const INIZIO={x:49.1, y:45.6};
+const TIMES=["17:30","17:40","17:50","18:00","18:10","18:20","18:30"];
+const ENDS =["17:40","17:50","18:00","18:10","18:20","18:30","18:40"];
+const GROUPS=[
+ {id:"ssa",   nome:"Spirito Santo · A", full:"Spirito Santo — Gruppo A", bimbi:"~50 bambini", seq:[3,2,4,5,6,7,8], salta:1, emoji:"🕊️", c:"#2f7d6e"},
+ {id:"ssb",   nome:"Spirito Santo · B", full:"Spirito Santo — Gruppo B", bimbi:"~50 bambini", seq:[2,3,5,6,7,8,1], salta:4, emoji:"🕊️", c:"#3a8d8d"},
+ {id:"chiara",nome:"Santa Chiara", full:"Santa Chiara", bimbi:"~40 bambini", seq:[4,5,3,7,8,1,2], salta:6, emoji:"🌿", c:"#5a8f3a"},
+ {id:"fatima",nome:"Madonna di Fatima", full:"Madonna di Fatima", bimbi:"~50 bambini", seq:[5,6,7,3,1,2,4], salta:8, emoji:"🌹", c:"#b3263a"},
+ {id:"magno", nome:"San Magno", full:"San Magno", bimbi:"~85 bambini", seq:[6,7,8,1,3,4,5], salta:2, emoji:"⭐", c:"#d9b44a"},
+ {id:"angeli",nome:"Angeli Custodi", full:"Angeli Custodi", bimbi:"~70 bambini", seq:[7,8,1,2,4,3,6], salta:5, emoji:"👼", c:"#6a4c93"},
+ {id:"sgsf",  nome:"S. Giuseppe + S. Francesco", full:"San Giuseppe + San Francesco", bimbi:"~50 bambini", seq:[8,1,2,4,5,6,3], salta:7, emoji:"🛠️", c:"#b5651d"}
+];
+const GBYID={}; GROUPS.forEach(g=>GBYID[g.id]=g);
+
+/* ---- decorative suits ---- */
+(function(){
+  const s=document.getElementById('suits'); const ch=['♥','♦','♣','♠','🕰','🔑'];
+  for(let i=0;i<14;i++){const e=document.createElement('span');
+    e.textContent=ch[i%ch.length];
+    e.style.left=(Math.random()*100)+'%'; e.style.top=(Math.random()*100)+'%';
+    e.style.fontSize=(26+Math.random()*34)+'px';
+    e.style.animationDelay=(-Math.random()*14)+'s';
+    e.style.animationDuration=(11+Math.random()*8)+'s';
+    s.appendChild(e);}
+})();
+
+/* ---- home grid ---- */
+(function(){
+  const grid=document.getElementById('groupGrid');
+  GROUPS.forEach(g=>{
+    const b=document.createElement('button');
+    b.className='gcard'; b.style.setProperty('--c',g.c);
+    b.onclick=()=>openGroup(g.id);
+    b.innerHTML=`<div class="gname">${g.nome}</div>
+      <div class="go">›</div>`;
+    grid.appendChild(b);
+  });
+})();
+
+/* ---- inni ---- */
+const HYMNS=[
+ {file:"inni/che-meraviglia.mp3", nome:"Che Meraviglia!", sub:"L'inno della nostra estate", c:"#d9b44a"},
+ {file:"inni/passaparola.mp3", nome:"Passaparola", sub:"Canto con i gesti", c:"#2f7d6e"},
+ {file:"inni/bella-fra.mp3", nome:"Bella Fra!", sub:"Ripara la mia casa", c:"#b3263a"}
+];
+(function(){
+  const wrap=document.getElementById('hymns');
+  const players=[];
+  const fmt=s=>{s=Math.max(0,Math.floor(s)); return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')};
+  HYMNS.forEach(h=>{
+    const d=document.createElement('div');
+    d.className='hymn'; d.style.setProperty('--c',h.c);
+    d.innerHTML=`
+      <button class="hplay" aria-label="Ascolta ${h.nome}">▶</button>
+      <div class="hbody">
+        <div class="hname">${h.nome}</div>
+        <div class="hsub">${h.sub}</div>
+        <div class="hbar"><div class="hfill"></div></div>
+        <div class="htime">0:00</div>
+        <div class="herr">🌐 Serve la connessione a internet per ascoltare gli inni.</div>
+      </div>`;
+    const a=new Audio(); a.preload='none'; a.src=h.file;
+    const btn=d.querySelector('.hplay'), fill=d.querySelector('.hfill'),
+          time=d.querySelector('.htime'), bar=d.querySelector('.hbar'), err=d.querySelector('.herr');
+    btn.onclick=()=>{
+      if(a.paused){ players.forEach(p=>{if(p!==a)p.pause()}); a.play().catch(()=>{err.style.display='block'}); }
+      else a.pause();
+    };
+    a.onplay=()=>{btn.textContent='❚❚'; err.style.display='none'};
+    a.onpause=()=>{btn.textContent='▶'};
+    a.onended=()=>{btn.textContent='▶'; fill.style.width='0%'; a.currentTime=0};
+    a.onerror=()=>{err.style.display='block'; btn.textContent='▶'};
+    a.onloadedmetadata=()=>{time.textContent='0:00 · '+fmt(a.duration)};
+    a.ontimeupdate=()=>{
+      if(a.duration){ fill.style.width=(a.currentTime/a.duration*100)+'%';
+        time.textContent=fmt(a.currentTime)+' · '+fmt(a.duration); }
+    };
+    bar.onclick=e=>{
+      if(!a.duration) return;
+      const r=bar.getBoundingClientRect();
+      a.currentTime=Math.max(0,Math.min(1,(e.clientX-r.left)/r.width))*a.duration;
+    };
+    players.push(a);
+    wrap.appendChild(d);
+  });
+})();
+
+/* ---- navigation ---- */
+let current='home';
+function show(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  current=id;
+  const back=document.getElementById('backBtn');
+  back.classList.toggle('show', id!=='home');
+  document.getElementById('barTitle').textContent =
+    id==='home' ? 'Festa degli Oratori' : (id==='map' ? 'La Mappa' : (window._gtitle||'Percorso'));
+  window.scrollTo({top:0,behavior:'instant'});
+}
+document.getElementById('backBtn').onclick=()=>{
+  if(current==='group'||current==='map') show('home');
+};
+
+/* ---- current turn (by clock) ---- */
+function currentTurn(){
+  const n=new Date();
+  // event day 2026-07-03; allow live highlight by time of day for testing
+  const mins=n.getHours()*60+n.getMinutes();
+  const start=17*60+30;
+  if(mins<start || mins>=18*60+40) return -1;
+  return Math.floor((mins-start)/10); // 0..6
+}
+
+/* ---- group screen ---- */
+function openGroup(gid){
+  const g=GBYID[gid]; window._gtitle=g.nome;
+  const t=currentTurn();
+  let stops='';
+  g.seq.forEach((sn,i)=>{
+    const s=STANDS[sn]; const now=(t===i);
+    stops+=`<div class="stop ${now?'now':''}">
+      <div class="time"><b>${TIMES[i]}</b></div>
+      <div class="card ${s.merenda?'merenda':''}" style="--c:${s.c}" onclick="openStand(${sn})">
+        ${now?'<span class="nowtag">ORA</span>':''}
+        <img src="${s.img}" alt="${s.nome}">
+        <div class="info">
+          <span class="badge">${s.merenda?'🫖 Merenda':'Stand '+sn}</span>
+          <div class="pname">${s.nome}</div>
+          <div class="game">${s.gioco}</div>
+        </div>
+      </div></div>`;
+  });
+  const sk=STANDS[g.salta];
+  document.getElementById('group').innerHTML=`
+    <div class="ghead" style="--c:${g.c}">
+      <div class="ge">${g.emoji}</div>
+      <h2>${g.full}</h2>
+      <p>${g.bimbi} · 7 tappe (6 giochi + 1 merenda)</p>
+      <button class="mapbtn" onclick="openMap('${g.id}')">🗺️ Vedi il percorso sulla mappa</button>
+    </div>
+    <div class="livebar ${t>=0?'show':''}"><span class="livedot"></span> Sei al turno delle ${t>=0?TIMES[t]:''} — segui la cornice rossa</div>
+    <div class="timeline">${stops}</div>
+    <p class="skip">In questo giro salti lo stand <b>${g.salta} · ${sk.nome}</b> (così non c'è mai coda).</p>
+  `;
+  show('group');
+}
+
+/* ---- map screen ---- */
+function buildMap(){
+  const wrap=document.getElementById('mapwrap');
+  // remove old pins
+  wrap.querySelectorAll('.pin,.startpin').forEach(e=>e.remove());
+  // start/end point
+  const sp=document.createElement('div'); sp.className='startpin';
+  sp.style.left=INIZIO.x+'%'; sp.style.top=INIZIO.y+'%'; sp.title='inizio/fine';
+  wrap.appendChild(sp);
+  for(let n=1;n<=8;n++){
+    const s=STANDS[n];
+    const p=document.createElement('div'); p.className='pin'; p.id='pin'+n;
+    p.style.setProperty('--c',s.c);
+    p.style.left=s.x+'%'; p.style.top=s.y+'%';
+    p.innerHTML = s.merenda ? '<span class="tea">🫖</span><span class="ord"></span>' : '<span class="ord"></span>';
+    p.onclick=()=>openStand(n);
+    wrap.appendChild(p);
+  }
+  // populate selector
+  const sel=document.getElementById('pathSel');
+  if(!sel.dataset.ready){
+    let o='<option value="">— nessuno (mostra tutti) —</option>';
+    GROUPS.forEach(g=>o+=`<option value="${g.id}">${g.full}</option>`);
+    sel.innerHTML=o; sel.dataset.ready='1';
+  }
+}
+function setPath(gid){
+  const pins=[...document.querySelectorAll('.pin')];
+  const trail=document.getElementById('trail');
+  document.getElementById('pathSel').value=gid||'';
+  if(!gid){
+    pins.forEach(p=>{p.classList.remove('in-path','dim'); p.querySelector('.ord').textContent='';});
+    trail.innerHTML=''; return;
+  }
+  const g=GBYID[gid];
+  pins.forEach(p=>{p.classList.add('dim'); p.classList.remove('in-path'); p.querySelector('.ord').textContent='';});
+  g.seq.forEach((sn,i)=>{
+    const p=document.getElementById('pin'+sn);
+    p.classList.add('in-path'); p.classList.remove('dim');
+    p.style.setProperty('--c',g.c);
+    p.querySelector('.ord').textContent=(i+1);
+  });
+  // dashed trail: inizio -> stops -> inizio
+  let pts=[INIZIO, ...g.seq.map(sn=>({x:STANDS[sn].x,y:STANDS[sn].y})), INIZIO];
+  let d='M '+pts.map(p=>p.x+' '+p.y).join(' L ');
+  trail.innerHTML=`<path d="${d}" fill="none" stroke="${g.c}" stroke-width="0.9"
+     stroke-dasharray="2 1.6" stroke-linecap="round" stroke-linejoin="round"
+     vector-effect="non-scaling-stroke" opacity="0.95"/>`;
+}
+function openMap(gid){
+  buildMap();
+  setPath(gid||'');
+  show('map');
+  if(gid) document.getElementById('barTitle').textContent='Percorso · '+GBYID[gid].nome;
+}
+
+/* ---- stand sheet ---- */
+function openStand(n){
+  const s=STANDS[n];
+  const sheet=document.getElementById('sheet');
+  sheet.style.setProperty('--c',s.c);
+  sheet.className='sheet'+(s.merenda?' merenda':'');
+  const extra = s.img2 ? `<img src="${s.img2}" alt="Topo" style="margin-left:-26px">` : '';
+  sheet.innerHTML=`
+    <div class="grab"></div>
+    <div class="top">
+      <img src="${s.img}" alt="${s.nome}">${extra}
+      <div>
+        <span class="badge">${s.merenda?'🫖 Stand '+n+' · Merenda':'Stand '+n}</span>
+        <h3>${s.nome}</h3>
+        <p class="g">${s.gioco}</p>
+      </div>
+    </div>
+    <p class="by">A cura di: <b>${s.gestore}</b></p>
+    <button class="closebtn" onclick="closeSheet()">Chiudi</button>`;
+  document.getElementById('sheetBg').classList.add('show');
+}
+function openInfo(){
+  const sheet=document.getElementById('sheet');
+  sheet.style.setProperty('--c','#6a4c93'); sheet.className='sheet';
+  sheet.innerHTML=`
+    <div class="grab"></div>
+    <span class="badge">🐇 Come funziona</span>
+    <h3>Il giro degli stand</h3>
+    <ul>
+      <li><b>8 stand</b> a tema personaggi di Alice, sparsi nella Villa Comunale.</li>
+      <li>Ogni parrocchia è un <b>gruppo</b> e segue il proprio percorso di <b>7 tappe</b>: 6 giochi + 1 merenda.</li>
+      <li>Si cambia stand <b>ogni 10 minuti</b>, al segnale (fischio/campanella). Dalle <b>17:30 alle 18:40</b>.</li>
+      <li>Ogni gruppo <b>salta uno stand</b>: è già tolto dal percorso, così non c'è mai coda.</li>
+      <li>Alla <b>merenda</b> (🫖 Cappellaio Matto) passa un solo gruppo per volta.</li>
+      <li>A ogni cambio, 1–2 bambini lasciano un <b>segno</b> sul cartellone dello stand.</li>
+    </ul>
+    <button class="closebtn" onclick="closeSheet()">Ho capito!</button>`;
+  document.getElementById('sheetBg').classList.add('show');
+}
+function closeSheet(){document.getElementById('sheetBg').classList.remove('show');}
+
+/* hash deep-link (optional): #map, #g/ssa */
+window.addEventListener('load',()=>{ buildMap(); });
+</script>
+</body>
+</html>

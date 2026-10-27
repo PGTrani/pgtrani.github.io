@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Momento di preghiera con i maturandi — Notte prima degli esami</title>
+<meta name="description" content="Veglia di preghiera per i maturandi alla vigilia dell'Esame di Stato 2026: introduzione, preghiera dei maturandi, preghiera a San Giuseppe da Copertino e benedizione finale.">
+<meta name="theme-color" content="#d9542b">
+
+<meta property="og:title" content="Momento di preghiera con i maturandi — Notte prima degli esami">
+<meta property="og:description" content="Veglia di preghiera per i maturandi alla vigilia dell'Esame di Stato 2026: introduzione, preghiera dei maturandi, preghiera a San Giuseppe da Copertino e benedizione finale.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:url" content="https://pgtrani.github.io/trani/notteprimaesami/">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%95%AF%EF%B8%8F</text></svg>">
+
+<style>
+  :root {
+    --color-bg: #fdf8f1;
+    --color-surface: #ffffff;
+    --color-text: #2a2320;
+    --color-text-muted: #6f6560;
+    --color-accent: #b4421f;
+    --color-accent-soft: #fbe6dc;
+    --color-border: #eadfd3;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-serif: Georgia, "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
+    --font-scale: 1;
+    --radius: 10px;
+  }
+
+  /* Tema scuro: segue le preferenze di sistema, salvo override manuale */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bg: #1c1816;
+      --color-surface: #282220;
+      --color-text: #f3ebe4;
+      --color-text-muted: #b3a79f;
+      --color-accent: #f07a50;
+      --color-accent-soft: rgba(240, 122, 80, 0.14);
+      --color-border: #3a312d;
+    }
+  }
+
+  /* Override manuale via pulsante "Tema", persistito in localStorage */
+  :root[data-theme="light"] {
+    --color-bg: #fdf8f1;
+    --color-surface: #ffffff;
+    --color-text: #2a2320;
+    --color-text-muted: #6f6560;
+    --color-accent: #b4421f;
+    --color-accent-soft: #fbe6dc;
+    --color-border: #eadfd3;
+  }
+  :root[data-theme="dark"] {
+    --color-bg: #1c1816;
+    --color-surface: #282220;
+    --color-text: #f3ebe4;
+    --color-text-muted: #b3a79f;
+    --color-accent: #f07a50;
+    --color-accent-soft: rgba(240, 122, 80, 0.14);
+    --color-border: #3a312d;
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    font-size: calc(100% * var(--font-scale));
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.65;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* Skip link per l'accessibilità da tastiera */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--color-accent);
+    color: #fff;
+    padding: 0.6em 1em;
+    border-radius: 0 0 var(--radius) 0;
+    z-index: 100;
+  }
+  .skip-link:focus { left: 0; }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .header-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .title-block { min-width: 0; }
+
+  .back {
+    display: inline-block;
+    margin-bottom: 0.4em;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .kicker {
+    margin: 0 0 0.25em;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  h1 {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  .subtitle {
+    margin: 0.2em 0 0;
+    font-style: italic;
+    color: var(--color-text-muted);
+  }
+
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .font-controls {
+    display: flex;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .font-controls button {
+    border: none;
+    border-radius: 0;
+    border-right: 1px solid var(--color-border);
+  }
+  .font-controls button:last-child { border-right: none; }
+
+  button {
+    font: inherit;
+    font-family: var(--font-sans);
+    background: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 0.45em 0.8em;
+    cursor: pointer;
+  }
+  button:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+  button:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  nav.indice {
+    max-width: 760px;
+    margin: 1.5rem auto 0;
+    padding: 0 1.25rem;
+  }
+  nav.indice ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  nav.indice a {
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  nav.indice a:hover,
+  nav.indice a:focus-visible {
+    border-bottom-color: var(--color-accent);
+  }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 4rem;
+  }
+
+  section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+  }
+  section:first-of-type {
+    margin-top: 1.5rem;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  h2 {
+    font-family: var(--font-serif);
+    color: var(--color-accent);
+    font-size: 1.4rem;
+    margin-top: 0;
+  }
+
+  p { font-size: 1.0625rem; }
+
+  /* Etichette delle voci: Celebrante / Maturando N / Tutti */
+  .voce {
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+
+  /* Indicazioni di rito (es. "Si può recitare insieme") */
+  .rubrica {
+    font-style: italic;
+    color: var(--color-text-muted);
+  }
+
+  /* Orazioni a versi: tipografia serif, a-capo conservati */
+  .orazione {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    line-height: 1.9;
+  }
+
+  /* Cue "Preghiamo." in grassetto */
+  .preghiamo { font-weight: 700; }
+
+  /* Ogni "Amen" nel colore di accento */
+  .amen {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  /* Citazioni di Papa Leone XIV */
+  .cit-papa { font-style: italic; }
+
+  /* Risposta dell'assemblea, evidenziata */
+  .risposta {
+    background: var(--color-accent-soft);
+    border-left: 4px solid var(--color-accent);
+    border-radius: var(--radius);
+    padding: 0.75rem 1.1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  sup a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  sup a:hover,
+  sup a:focus-visible {
+    text-decoration: underline;
+  }
+
+  footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+  footer h2 {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .footnotes { padding-left: 1.2rem; }
+  .footnotes li { margin-bottom: 0.5rem; }
+  .footnotes a { color: var(--color-accent); }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 1.25rem; }
+    .orazione { font-size: 1.05rem; }
+  }
+</style>
+
+<!-- Applica subito tema e dimensione testo salvati, prima del rendering -->
+<script>
+(function () {
+  var root = document.documentElement;
+  try {
+    var theme = localStorage.getItem('theme');
+    if (theme === 'light' || theme === 'dark') {
+      root.setAttribute('data-theme', theme);
+    }
+    var scale = localStorage.getItem('fontScale');
+    if (scale) {
+      root.style.setProperty('--font-scale', scale);
+    }
+  } catch (e) {}
+})();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Vai al contenuto</a>
+
+<header>
+  <div class="header-inner">
+    <div class="title-block">
+      <a class="back" href="../">‹ PG Trani</a>
+      <p class="kicker">Notte prima degli esami, 17 giugno 2026</p>
+      <h1>Momento di preghiera con i maturandi</h1>
+      <p class="subtitle">Notte prima degli esami</p>
+    </div>
+    <div class="controls" role="group" aria-label="Impostazioni di lettura">
+      <button id="theme-toggle" type="button" aria-pressed="false">
+        <span class="icon" aria-hidden="true">🌙</span>
+        <span class="label">Tema scuro</span>
+      </button>
+      <div class="font-controls" role="group" aria-label="Dimensione testo">
+        <button id="font-decrease" type="button" aria-label="Riduci dimensione testo">A−</button>
+        <button id="font-reset" type="button" aria-label="Dimensione testo predefinita">A</button>
+        <button id="font-increase" type="button" aria-label="Aumenta dimensione testo">A+</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="indice" aria-label="Indice delle parti">
+  <ul>
+    <li><a href="#sec-introduzione">Introduzione alla preghiera</a></li>
+    <li><a href="#sec-maturandi">Preghiera dei maturandi</a></li>
+    <li><a href="#sec-san-giuseppe">Preghiera a San Giuseppe da Copertino</a></li>
+    <li><a href="#sec-padre-nostro">Padre nostro</a></li>
+    <li><a href="#sec-benedizione">Benedizione finale</a></li>
+    <li><a href="#sec-consegna">Consegna dei doni</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+  <section aria-labelledby="sec-introduzione">
+    <h2 id="sec-introduzione">Introduzione alla preghiera</h2>
+
+    <p><span class="voce">Celebrante:</span> Carissimi giovani maturandi, ci incontriamo alla vigilia di un giorno importante: domani comincia l’Esame di Stato, quella che tutti chiamiamo “la maturità”. È normale portare nel cuore un po’ di emozione, di stanchezza e forse anche un po’ di paura. Proprio per questo ci siamo dati appuntamento qui: per dirvi che non siete soli perché noi facciamo il tifo per voi e il Signore vuole accompagnarvi con la sua Benedizione.</p>
+
+    <p class="preghiamo">Preghiamo.</p>
+
+    <p class="orazione">
+      Signore nostro Dio,<br>
+      tu conosci ciascuno di questi giovani per nome.<br>
+      In questa notte che precede una prova importante,<br>
+      dona loro serenità nella mente e pace nel cuore;<br>
+      fa’ che non si sentano mai soli<br>
+      e che trovino in te un amico fedele<br>
+      lungo tutte le strade della loro vita.<br>
+      Te lo chiediamo per Cristo nostro Signore.
+    </p>
+
+    <p class="risposta"><span class="voce">Tutti:</span> <span class="amen">Amen.</span></p>
+  </section>
+
+  <section aria-labelledby="sec-maturandi">
+    <h2 id="sec-maturandi">Preghiera dei maturandi</h2>
+
+    <p><span class="voce">Maturando 1:</span> Signore Gesù, fra pochi giorni si concluderà una fase importante della vita di noi giovani maturandi, e intraprenderemo un nuovo cammino che ci porterà ad entrare nel mondo adulto: a dover scegliere e prendere decisioni importanti, ad essere sempre più protagonisti nella gestione della nostra vita. È impensabile attraversare questa fase così bella e importante, ma terribilmente delicata, senza la tua presenza e il tuo sostegno.</p>
+
+    <p><span class="voce">Maturando 2:</span> Preghiamo affinché la “maturità” scolastica non sia solo il nome di una tappa, di un esame, della fine di un ciclo di studi, ma apra il cuore di noi giovani ad un nuovo modo di vivere, come persone davvero mature interiormente.</p>
+
+    <p><span class="voce">Maturando 3:</span> Signore, ti chiediamo di essere luce e guida per noi giovani nel cammino che stiamo per intraprendere. Donaci la saggezza per affrontare le sfide e la forza per superare gli ostacoli. Fa’ che possiamo trovare in Te un punto di riferimento costante e sicuro.</p>
+
+    <p><span class="voce">Maturando 4:</span> Signore, preghiamo affinché ognuno di noi maturandi possa scoprire e valorizzare i propri talenti. Aiutaci a coltivare con passione i doni ricevuti, affinché possiamo metterli al servizio del bene comune e della nostra crescita personale e professionale.</p>
+
+    <p><span class="voce">Maturando 5:</span> Signore, accompagna noi giovani nel nostro percorso di vita, proteggici e sostienici nelle scelte che faremo. Fa’ che possiamo avere il coraggio di seguire i nostri sogni, rimanendo sempre fedeli ai valori del Vangelo e alla Tua parola.</p>
+
+    <p><span class="voce">Maturando 6:</span> Signore Gesù, ci rivolgiamo a Te in questo momento cruciale della nostra vita. Ti chiediamo di illuminare il nostro cammino, di darci la forza e il coraggio necessari per affrontare gli esami e tutte le sfide future. Aiutaci a crescere non solo come studenti, ma anche come persone, seguendo sempre i tuoi insegnamenti.</p>
+
+    <p><span class="voce">Maturando 7:</span> Signore, ti preghiamo di guidarci mentre ci prepariamo a concludere questo importante capitolo della nostra vita scolastica. Fa’ che possiamo affrontare con serenità e determinazione gli esami, confidando nel nostro impegno e nella Tua protezione. Donaci la capacità di fare scelte sagge e di seguire il cammino che hai preparato per noi.</p>
+  </section>
+
+  <section aria-labelledby="sec-san-giuseppe">
+    <h2 id="sec-san-giuseppe">Preghiera a San Giuseppe da Copertino</h2>
+
+    <p class="orazione">
+      O san Giuseppe da Copertino,<br>
+      amico degli studenti e protettore degli esaminandi,<br>
+      vengo ad implorare da te il tuo aiuto.<br>
+      Tu sai, per tua personale esperienza,<br>
+      quanta ansietà accompagni l’impegno dello studio e degli esami<br>
+      e quanto facili siano il pericolo dello smarrimento intellettuale<br>
+      e dello scoraggiamento.<br>
+      Tu che fosti assistito prodigiosamente da Dio<br>
+      negli studi e negli esami per l’ammissione agli Ordini sacri,<br>
+      chiedi al Signore luce per la mia mente e forza per la mia volontà.<br>
+      Tu che sperimentasti tanto concretamente<br>
+      l’aiuto materno della Madonna, Madre della speranza,<br>
+      pregala per me,<br>
+      perché possa superare facilmente tutte le difficoltà<br>
+      negli studi e negli esami.<br>
+      <span class="amen">Amen.</span>
+    </p>
+  </section>
+
+  <section aria-labelledby="sec-padre-nostro">
+    <h2 id="sec-padre-nostro">Padre nostro</h2>
+  </section>
+
+  <section aria-labelledby="sec-benedizione">
+    <h2 id="sec-benedizione">Benedizione finale</h2>
+
+<!--    <p><span class="voce">Celebrante:</span> E ora, prima di salutarci, vi affido alla benedizione del Signore.</p>-->
+
+<!--    <p class="orazione">-->
+<!--      Il Signore vi benedica e vi custodisca,<br>-->
+<!--      faccia brillare il suo volto su di voi<br>-->
+<!--      e vi doni la sua pace:<br>-->
+<!--      questa notte, nei giorni dell’esame<br>-->
+<!--      e lungo tutta la vostra vita.<br>-->
+<!--      Nel nome del Padre, del Figlio e dello Spirito Santo.-->
+<!--    </p>-->
+
+<!--    <p class="risposta"><span class="voce">Tutti:</span> <span class="amen">Amen.</span></p>-->
+
+<!--    <p><span class="voce">Celebrante:</span> Andate in pace, e in bocca al lupo per i vostri esami.</p>-->
+  </section>
+
+  <section aria-labelledby="sec-consegna">
+    <h2 id="sec-consegna">Consegna dei doni</h2>
+  </section>
+
+</main>
+
+<footer>
+  <p>Notte prima degli esami, 17 giugno 2026</p>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+
+  // Tema chiaro/scuro
+  var themeToggle = document.getElementById('theme-toggle');
+  var themeIcon = themeToggle.querySelector('.icon');
+  var themeLabel = themeToggle.querySelector('.label');
+
+  function effectiveTheme() {
+    var attr = root.getAttribute('data-theme');
+    if (attr === 'light' || attr === 'dark') return attr;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function syncThemeToggle() {
+    var dark = effectiveTheme() === 'dark';
+    themeToggle.setAttribute('aria-pressed', String(dark));
+    themeIcon.textContent = dark ? '☀️' : '🌙';
+    themeLabel.textContent = dark ? 'Tema chiaro' : 'Tema scuro';
+  }
+
+  themeToggle.addEventListener('click', function () {
+    var next = effectiveTheme() === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    syncThemeToggle();
+  });
+
+  syncThemeToggle();
+
+  // Dimensione testo
+  var MIN_SCALE = 0.85;
+  var MAX_SCALE = 1.5;
+  var STEP = 0.125;
+
+  function getScale() {
+    var value = parseFloat(getComputedStyle(root).getPropertyValue('--font-scale'));
+    return isNaN(value) ? 1 : value;
+  }
+
+  function setScale(value) {
+    value = Math.min(MAX_SCALE, Math.max(MIN_SCALE, value));
+    root.style.setProperty('--font-scale', value.toFixed(3));
+    try { localStorage.setItem('fontScale', value.toFixed(3)); } catch (e) {}
+  }
+
+  document.getElementById('font-increase').addEventListener('click', function () {
+    setScale(getScale() + STEP);
+  });
+  document.getElementById('font-decrease').addEventListener('click', function () {
+    setScale(getScale() - STEP);
+  });
+  document.getElementById('font-reset').addEventListener('click', function () {
+    setScale(1);
+  });
+})();
+</script>
+</body>
+</html>
