@@ -4,6 +4,7 @@ Sito statico della Pastorale Giovanile, pubblicato con GitHub Pages su <https://
 
 - `index.html`: home con Diocesi e scelta della città
 - `diocesi/`: eventi diocesani
+  - `diocesi/gdg2026/`: Giornata Diocesana della Gioventù 2026 «Abbiate coraggio» (con `messaggio/`, sintesi del messaggio del Papa per la XLI GMG)
   - `diocesi/meeting2026/`: XIX Meeting Giovanissimi «MeTeenGo» (con `laboratori/`)
 - `trani/`: pagina di Trani
   - `trani/calendario/`: pagina per aggiungere il calendario al telefono (link da condividere su WhatsApp)
