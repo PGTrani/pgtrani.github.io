@@ -339,6 +339,69 @@ h2 {
 }
 .prose .sign { color: var(--muted); font-size: .95rem; }
 
+/* Pagine di preghiera: testo grande da leggere col telefono in mano, chi parla in evidenza */
+.prayer { font-size: 1.1875rem; line-height: 1.6; }
+.prayer h2 { margin-top: 36px; }
+.prayer p { margin: 0 0 14px; text-wrap: pretty; }
+.prayer .who {
+  display: block;
+  margin-bottom: 2px;
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  color: var(--tile-ink);
+}
+/* Le parti di tutti: in grassetto, come nei libretti */
+.prayer .all { font-weight: 700; }
+.prayer .all .who { color: var(--red); }
+.prayer .rubric { color: var(--muted); font-style: italic; font-size: 1.0625rem; }
+.prayer .card {
+  margin: 0 0 14px;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+.prayer .card > :last-child { margin-bottom: 0; }
+.prayer .card.tint { background: var(--tint); box-shadow: none; }
+.prayer .verse p { margin-bottom: 18px; }
+/* Rientro sospeso: il verso che va a capo non sembra un verso nuovo */
+.prayer .verse span { display: block; padding-left: 1em; text-indent: -1em; }
+.prayer .verse em { font-style: normal; font-weight: 600; font-size: .9rem; color: var(--muted); }
+.prayer .song h3 {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -.01em;
+}
+.prayer sup { font-size: .62em; font-weight: 700; color: var(--red); margin-right: 2px; }
+
+/* Biglietti con le parole della serata */
+.words { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.words li {
+  padding: 18px 10px 16px;
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  text-align: center;
+  line-height: 1.25;
+}
+.words small { display: block; font-size: .85rem; font-style: italic; color: var(--muted); }
+.words strong {
+  display: block;
+  margin: 6px 0 8px;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid color-mix(in srgb, var(--red) 35%, transparent);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  color: var(--red);
+}
+.words span { display: block; font-size: 1.9rem; font-weight: 700; }
+.words i { display: block; margin-top: 4px; font-size: .8rem; font-style: normal; color: var(--muted); white-space: nowrap; }
+
 .hidden { display: none; }
 
 footer {
