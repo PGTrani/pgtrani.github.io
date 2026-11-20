@@ -263,6 +263,10 @@ h2 {
   flex-shrink: 0;
 }
 
+/* Logo PG al posto dell'icona: disco bianco come nella testata */
+img.tile { padding: 1px; background: #fff; border-radius: 50%; object-fit: contain; }
+.row.soon img.tile { background: #fff; box-shadow: none; opacity: .75; }
+
 .label { flex: 1; min-width: 0; }
 .label small {
   display: block;
